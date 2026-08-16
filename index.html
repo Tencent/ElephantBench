@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="ElephantBench is a closed-book knowledge probe for evaluating whether LLMs remember long-tail facts and their different verified accounts."
+    />
+    <meta name="theme-color" content="#10273a" />
+    <meta property="og:title" content="ElephantBench" />
+    <meta
+      property="og:description"
+      content="Probing the epistemic myopia of LLMs under long-tail divergent knowledge."
+    />
+    <meta
+      property="og:image"
+      content="https://pzs19.github.io/ElephantBench/assets/benchmark-overview.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pzs19.github.io/ElephantBench/" />
+    <title>ElephantBench — A Closed-Book Knowledge Probe</title>
+    <link rel="icon" href="assets/elephant-icon.png" type="image/png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="nav-shell">
+        <a class="brand" href="#top" aria-label="ElephantBench home">
+          <img src="assets/elephant-icon.png" alt="" />
+          <span>ElephantBench</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span><span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="#overview">Overview</a>
+          <a href="#construction">Construction</a>
+          <a href="#benchmark">Benchmark</a>
+          <a href="#findings">Findings</a>
+          <a href="#resources">Resources</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero">
+        <div class="hero-orb hero-orb-one"></div>
+        <div class="hero-orb hero-orb-two"></div>
+        <div class="hero-shell">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span> A closed-book knowledge probe</p>
+            <h1>Elephant<span>Bench</span></h1>
+            <h2>
+              Blind Men and the Elephant: Probing the Epistemic Myopia of LLMs under
+              Long-Tail Divergent Knowledge
+            </h2>
+            <p class="hero-question">
+              Can a language model remember a long-tail fact—and recover
+              <strong>all of its different verified accounts</strong>?
+            </p>
+            <p class="authors">
+              Zhuoshi Pan<sup>1,2*</sup>, Junru Lu<sup>2*</sup>, Yan Qian<sup>3*</sup>,
+              H. Vicky Zhao<sup>1†</sup>, Di Yin<sup>2</sup>, Xing Sun<sup>2†</sup>
+            </p>
+            <p class="affiliations">
+              <sup>1</sup>Tsinghua University &nbsp;·&nbsp;
+              <sup>2</sup>Tencent Youtu Lab &nbsp;·&nbsp;
+              <sup>3</sup>University of Warwick
+            </p>
+            <p class="author-note">* Equal contribution &nbsp; † Corresponding authors</p>
+            <div class="hero-actions" aria-label="Project links">
+              <a class="button button-primary" href="https://github.com/pzs19/ElephantBench">
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.86c-2.78.6-3.37-1.18-3.37-1.18-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.35 1.09 2.92.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.55 9.55 0 0 1 12 6.83c.85 0 1.71.11 2.51.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.86v2.76c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" />
+                </svg>
+                Code
+              </a>
+              <a
+                class="button button-light"
+                href="https://huggingface.co/datasets/panzs19/ElephantBench"
+              >
+                <span class="hf-mark" aria-hidden="true">HF</span>
+                Dataset
+              </a>
+              <a
+                class="button button-ghost"
+                href="https://huggingface.co/datasets/panzs19/ElephantBench-Source"
+              >
+                Source corpus
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="figure-label">
+              <span>Benchmark at a glance</span>
+              <span class="figure-hint">Open full resolution ↗</span>
+            </div>
+            <a href="assets/benchmark-overview.png" target="_blank" rel="noreferrer">
+              <img
+                src="assets/benchmark-overview.png"
+                alt="ElephantBench construction, conflict example, and closed-book evaluation overview"
+              />
+            </a>
+          </div>
+
+          <dl class="hero-stats" aria-label="Benchmark statistics">
+            <div><dt>1,094</dt><dd>questions</dd></div>
+            <div><dt>405</dt><dd>matched pairs</dd></div>
+            <div><dt>22</dt><dd>knowledge fields</dd></div>
+            <div><dt>32</dt><dd>model configurations</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section id="overview" class="section section-light">
+        <div class="section-shell">
+          <div class="section-heading narrow reveal">
+            <p class="kicker">The problem</p>
+            <h2>Knowing one answer is not the same as knowing the whole fact.</h2>
+            <p>
+              Factual QA usually assumes one canonical answer. Long-tail web knowledge is different:
+              evidence is sparse, sources may preserve incompatible accounts, and a model can recall
+              the prevailing view while silently omitting another verified account.
+            </p>
+          </div>
+
+          <div class="comparison-grid">
+            <article class="comparison-card reveal">
+              <span class="card-index">01</span>
+              <p class="mini-label">Long-tail QA</p>
+              <h3>Was the rare fact recalled?</h3>
+              <p>Useful for retention, but usually scores against a single canonical answer.</p>
+            </article>
+            <article class="comparison-card reveal">
+              <span class="card-index">02</span>
+              <p class="mini-label">Conflict benchmarks</p>
+              <h3>Can supplied evidence be reconciled?</h3>
+              <p>Useful for reading and reasoning, but typically exposes the conflict at inference time.</p>
+            </article>
+            <article class="comparison-card comparison-card-accent reveal">
+              <span class="card-index">03</span>
+              <p class="mini-label">ElephantBench</p>
+              <h3>Do different accounts coexist in memory?</h3>
+              <p>Sources are withheld. The model must recover every verified account from parametric memory.</p>
+            </article>
+          </div>
+
+          <div class="thesis-card reveal">
+            <img src="assets/elephant-icon.png" alt="Blindfolded people examining different parts of an elephant" />
+            <div>
+              <p class="kicker">Epistemic myopia</p>
+              <blockquote>
+                A response may be locally correct yet globally incomplete: the model remembers one
+                documented account and presents it as the whole story.
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="construction" class="section section-ink">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <p class="kicker kicker-blue">Benchmark construction</p>
+            <h2>From a low-exposure corpus to auditable knowledge probes.</h2>
+            <p>
+              A graph-based pipeline discovers naturally occurring disagreements, gathers support on
+              both sides, and converts each verified conflict into a matched question pair.
+            </p>
+          </div>
+
+          <ol class="pipeline" aria-label="ElephantBench construction pipeline">
+            <li class="pipeline-step reveal">
+              <span class="step-number">1</span>
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M8 10h32v7H8zM12 22h24v16H12z"/><path d="m17 27 4 4 10-10"/></svg>
+              </div>
+              <div>
+                <p class="step-phase">Discover</p>
+                <h3>Start from <i>D</i><sub>low</sub></h3>
+                <p>Mine the filtered remainder of a web corpus, where low-exposure facts are less saturated by repetition.</p>
+              </div>
+            </li>
+            <li class="pipeline-step reveal">
+              <span class="step-number">2</span>
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><circle cx="13" cy="13" r="5"/><circle cx="35" cy="13" r="5"/><circle cx="24" cy="35" r="5"/><path d="m17 16 14 0M16 18l6 13M32 18l-6 13"/></svg>
+              </div>
+              <div>
+                <p class="step-phase">Link</p>
+                <h3>Retrieve related documents</h3>
+                <p>Knowledge-point tags form precise local clusters; normalized entities recover related documents across clusters.</p>
+              </div>
+            </li>
+            <li class="pipeline-step reveal">
+              <span class="step-number">3</span>
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><rect x="6" y="10" width="13" height="27" rx="2"/><rect x="29" y="10" width="13" height="27" rx="2"/><path d="M19 19h10M19 29h10"/></svg>
+              </div>
+              <div>
+                <p class="step-phase">Classify</p>
+                <h3>Build the document graph</h3>
+                <p>An LLM reads full document pairs and induces support and conflict edges for the same subject–attribute pair.</p>
+              </div>
+            </li>
+            <li class="pipeline-step reveal">
+              <span class="step-number">4</span>
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="m15 24 6 6 13-14"/></svg>
+              </div>
+              <div>
+                <p class="step-phase">Verify</p>
+                <h3>Keep conflicts supported on both sides</h3>
+                <p>Conflict-centered subgraphs are source-traced, checked against full documents and external web evidence, then human-reviewed.</p>
+              </div>
+            </li>
+            <li class="pipeline-step reveal">
+              <span class="step-number">5</span>
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><path d="M9 9h30v24H23l-8 7v-7H9z"/><path d="M16 17h16M16 24h10"/></svg>
+              </div>
+              <div>
+                <p class="step-phase">Probe</p>
+                <h3>Ask without showing the sources</h3>
+                <p>Each conflict yields a named-entity question and a clue-based question with the same verified answer set.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="pipeline-callout reveal">
+            <span>Discovery graph</span>
+            <div class="callout-line"></div>
+            <strong>Hidden at evaluation time</strong>
+            <div class="callout-line"></div>
+            <span>Question only</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="benchmark" class="section section-warm">
+        <div class="section-shell">
+          <div class="section-heading narrow reveal">
+            <p class="kicker kicker-orange">What one item looks like</p>
+            <h2>Two sources. Two accounts. One closed-book test.</h2>
+            <p>
+              Source documents establish the reference answers during construction, but are concealed
+              from every evaluated model.
+            </p>
+          </div>
+
+          <div class="case-study reveal">
+            <div class="sources">
+              <article class="source-card source-blue">
+                <div class="source-head"><span>Source A</span><strong>IMDb</strong></div>
+                <p>“Mother Teresa was born on <mark>August 26, 1910</mark> … as Agnes Gonxha Bojaxhiu.”</p>
+              </article>
+              <div class="conflict-mark" aria-label="conflicts with">≠</div>
+              <article class="source-card source-orange">
+                <div class="source-head"><span>Source B</span><strong>Poem of Quotes</strong></div>
+                <p>“Mother Teresa, Agnes Gonxha Bojaxhiu, was born in Skopje, Macedonia on <mark>August 27, 1910</mark>.”</p>
+              </article>
+            </div>
+            <div class="questions">
+              <div class="question-card">
+                <span>Named-entity formulation</span>
+                <p>What birth date was reported for Mother Teresa?</p>
+              </div>
+              <div class="question-card">
+                <span>Clue-based formulation</span>
+                <p>What birth date was reported for the Albanian-born Roman Catholic nun who founded the Missionaries of Charity and received the 1979 Nobel Peace Prize?</p>
+              </div>
+            </div>
+            <div class="answer-strip">
+              <span>Verified answer set</span>
+              <strong>August 26, 1910</strong>
+              <i>and</i>
+              <strong>August 27, 1910</strong>
+              <span class="closed-book-tag">sources withheld</span>
+            </div>
+          </div>
+
+          <div class="metrics-heading reveal">
+            <div>
+              <p class="kicker">Diagnostic scoring</p>
+              <h2>Separate accessibility from completeness.</h2>
+            </div>
+            <p>
+              Instead of collapsing behavior into one accuracy number, ElephantBench distinguishes
+              complete, partial, and failed recall.
+            </p>
+          </div>
+          <div class="metric-grid">
+            <article class="metric metric-complete reveal">
+              <span>C</span><h3>Complete recall</h3><p>Every verified account is recovered without a material contradiction.</p><small>Higher is better</small>
+            </article>
+            <article class="metric metric-partial reveal">
+              <span>P</span><h3>Partial recall</h3><p>At least one, but not every, verified account is recovered.</p><small>Lower is better</small>
+            </article>
+            <article class="metric metric-failed reveal">
+              <span>F</span><h3>Failed recall</h3><p>No verified account is recovered, or the response materially contradicts the references.</p><small>Lower is better</small>
+            </article>
+            <article class="metric metric-conditional reveal">
+              <span>K</span><h3>Conditional completeness</h3><p>The share of complete recall among questions where at least one account is remembered.</p><small>Higher is better</small>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="findings" class="section section-light findings-section">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <p class="kicker">Main findings</p>
+            <h2>Stronger recall still leaves much of the elephant unseen.</h2>
+            <p>
+              Across 32 open-weight and proprietary model configurations, incomplete recall remains the
+              dominant failure mode once a long-tail fact becomes accessible.
+            </p>
+          </div>
+
+          <div class="result-layout">
+            <article class="result-panel reveal">
+              <div class="result-title">
+                <div><p>Strongest single model</p><h3>Kimi-K3</h3></div>
+                <strong>52.4% <span>complete</span></strong>
+              </div>
+              <div class="stacked-bar" aria-label="52.38 percent complete, 45.25 percent partial, 2.38 percent failed">
+                <span class="bar-c" style="width: 52.38%">C 52.4</span>
+                <span class="bar-p" style="width: 45.25%">P 45.2</span>
+                <span class="bar-f" style="width: 2.37%"><i>F</i></span>
+              </div>
+              <div class="bar-legend"><span class="legend-c">Complete</span><span class="legend-p">Partial</span><span class="legend-f">Failed</span></div>
+              <p class="result-note">Nearly all remaining questions are answered with only part of the verified account set.</p>
+            </article>
+
+            <article class="result-panel result-panel-dark reveal">
+              <div class="oracle-number"><span>52.4%</span><i>→</i><strong>81.2%</strong></div>
+              <h3>Models are complementary, but share a blind spot.</h3>
+              <p>A greedy oracle over all configurations raises complete recall substantially, yet 18.8% of questions remain partial for every model.</p>
+            </article>
+          </div>
+
+          <div class="insight-grid">
+            <article class="insight-card reveal">
+              <span class="insight-rule blue"></span>
+              <p class="mini-label">Scale</p>
+              <h3>Larger models remember more facts.</h3>
+              <p>Scaling generally reduces complete failure, but does not eliminate incomplete recall across verified accounts.</p>
+            </article>
+            <article class="insight-card reveal">
+              <span class="insight-rule orange"></span>
+              <p class="mini-label">Reasoning</p>
+              <h3>More deliberation is not a uniform remedy.</h3>
+              <p>Reasoning improves complete recall for some frontier models, but can suppress the less salient account in smaller models.</p>
+            </article>
+            <article class="insight-card insight-wide reveal">
+              <span class="insight-rule green"></span>
+              <div>
+                <p class="mini-label">Exposure asymmetry</p>
+                <h3>The rare account determines whether memory is complete.</h3>
+                <p>Exposure to the prevailing view helps a model remember the fact. Exposure to its less frequently reported counterpart is more closely associated with recalling the full account set.</p>
+              </div>
+              <div class="exposure-viz" aria-hidden="true">
+                <div><span>Prevailing view</span><i style="--w: 92%"></i><small>fact accessibility</small></div>
+                <div><span>Rare account</span><i class="orange-bar" style="--w: 42%"></i><small>memory completeness</small></div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="resources" class="section section-ink resources-section">
+        <div class="section-shell">
+          <div class="resource-layout">
+            <div class="section-heading reveal">
+              <p class="kicker kicker-blue">Use ElephantBench</p>
+              <h2>Data, evaluation, and construction in one repository.</h2>
+              <p>
+                Run target models closed-book, grade responses with the published rubric, compute
+                C/P/F/K, or reconstruct the benchmark from the source corpus.
+              </p>
+              <div class="resource-links">
+                <a href="https://github.com/pzs19/ElephantBench">Evaluation code <span>↗</span></a>
+                <a href="https://huggingface.co/datasets/panzs19/ElephantBench">Benchmark data <span>↗</span></a>
+                <a href="https://huggingface.co/datasets/panzs19/ElephantBench-Source">Source corpus <span>↗</span></a>
+              </div>
+            </div>
+            <div class="code-window reveal">
+              <div class="code-head"><span></span><span></span><span></span><small>Quick start</small></div>
+              <pre><code><span class="code-comment"># Install the evaluation toolkit</span>
+git clone https://github.com/pzs19/ElephantBench.git
+cd ElephantBench
+python -m pip install -e .
+
+<span class="code-comment"># Query a model without sources or tools</span>
+elephantbench-run \
+  --input data/elephantbench.jsonl \
+  --output outputs/my-model.jsonl \
+  --model my-model --resume
+
+<span class="code-comment"># Judge and compute C / P / F / K</span>
+elephantbench-judge --benchmark data/elephantbench.jsonl \
+  --responses outputs/my-model.jsonl \
+  --output outputs/my-model.judged.jsonl \
+  --judge-model my-judge-model
+
+elephantbench-score --benchmark data/elephantbench.jsonl \
+  --results outputs/my-model.judged.jsonl</code></pre>
+            </div>
+          </div>
+
+          <div class="citation reveal">
+            <div>
+              <p class="kicker kicker-blue">Citation</p>
+              <h2>Build on the probe.</h2>
+            </div>
+            <div class="citation-code">
+              <button type="button" data-copy-citation>Copy BibTeX</button>
+              <pre id="bibtex"><code>@misc{pan2026elephantbench,
+  title  = {Blind Men and the Elephant: Probing the Epistemic
+            Myopia of LLMs under Long-Tail Divergent Knowledge},
+  author = {Pan, Zhuoshi and Lu, Junru and Qian, Yan and
+            Zhao, H. Vicky and Yin, Di and Sun, Xing},
+  year   = {2026},
+  url    = {https://pzs19.github.io/ElephantBench/}
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-shell">
+        <a class="brand footer-brand" href="#top">
+          <img src="assets/elephant-icon.png" alt="" />
+          <span>ElephantBench</span>
+        </a>
+        <p>A closed-book probe of long-tail factual memory and cross-source completeness.</p>
+        <div><a href="https://github.com/pzs19/ElephantBench">GitHub</a><a href="https://huggingface.co/datasets/panzs19/ElephantBench">Hugging Face</a></div>
+      </div>
+    </footer>
+  </body>
+</html>
