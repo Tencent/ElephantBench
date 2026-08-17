@@ -137,17 +137,17 @@
               <h3>Was the rare fact recalled?</h3>
               <p>Useful for retention, but usually scores against a single canonical answer.</p>
             </article>
-            <article class="comparison-card reveal">
-              <span class="card-index">02</span>
-              <p class="mini-label">Conflict benchmarks</p>
-              <h3>Can supplied evidence be reconciled?</h3>
-              <p>Useful for reading and reasoning, but typically exposes the conflict at inference time.</p>
-            </article>
             <article class="comparison-card comparison-card-accent reveal">
-              <span class="card-index">03</span>
+              <span class="card-index">02</span>
               <p class="mini-label">ElephantBench</p>
               <h3>Do different accounts coexist in memory?</h3>
               <p>Sources are withheld. The model must recover every verified account from parametric memory.</p>
+            </article>
+            <article class="comparison-card reveal">
+              <span class="card-index">03</span>
+              <p class="mini-label">Open-book conflict benchmarks</p>
+              <h3>Can supplied evidence be reconciled?</h3>
+              <p>Useful for reading and reasoning, but typically exposes the conflict at inference time.</p>
             </article>
           </div>
 
@@ -212,16 +212,27 @@
             <li class="pipeline-step reveal">
               <span class="step-number">4</span>
               <div class="step-icon" aria-hidden="true">
-                <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="m15 24 6 6 13-14"/></svg>
+                <svg viewBox="0 0 48 48"><circle cx="14" cy="14" r="5"/><circle cx="34" cy="14" r="5"/><circle cx="24" cy="33" r="5"/><path d="M18 16l12 0M17 19l5 10M31 19l-5 10M8 41h32"/></svg>
               </div>
               <div>
-                <p class="step-phase">Verify</p>
-                <h3>Keep conflicts supported on both sides</h3>
-                <p>Conflict-centered subgraphs are source-traced, checked against full documents and external web evidence, then human-reviewed.</p>
+                <p class="step-phase">Synthesize</p>
+                <h3>Sample subgraphs and generate QA</h3>
+                <p>Each sampled conflict edge is expanded with support neighbors. Its local subgraph yields one named-entity and one clue-based question.</p>
               </div>
             </li>
             <li class="pipeline-step reveal">
               <span class="step-number">5</span>
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="m15 24 6 6 13-14"/></svg>
+              </div>
+              <div>
+                <p class="step-phase">Verify</p>
+                <h3>Validate every account</h3>
+                <p>An independent LLM checks the full seed documents, a web agent seeks external evidence, and human reviewers conduct the final audit.</p>
+              </div>
+            </li>
+            <li class="pipeline-step reveal">
+              <span class="step-number">6</span>
               <div class="step-icon" aria-hidden="true">
                 <svg viewBox="0 0 48 48"><path d="M9 9h30v24H23l-8 7v-7H9z"/><path d="M16 17h16M16 24h10"/></svg>
               </div>
@@ -291,8 +302,8 @@
               <h2>Separate accessibility from completeness.</h2>
             </div>
             <p>
-              Instead of collapsing behavior into one accuracy number, ElephantBench distinguishes
-              complete, partial, and failed recall.
+              Instead of collapsing behavior into one accuracy number, ElephantBench partitions every
+              response into complete, partial, or failed recall, with <strong>C + P + F = 1</strong>.
             </p>
           </div>
           <div class="metric-grid">
@@ -306,7 +317,7 @@
               <span>F</span><h3>Failed recall</h3><p>No verified account is recovered, or the response materially contradicts the references.</p><small>Lower is better</small>
             </article>
             <article class="metric metric-conditional reveal">
-              <span>K</span><h3>Conditional completeness</h3><p>The share of complete recall among questions where at least one account is remembered.</p><small>Higher is better</small>
+              <span>K</span><h3>Conditional completeness</h3><p><strong>K = C / (C + P)</strong> measures the share of complete recall among questions where at least one verified account is remembered.</p><small>Higher is better</small>
             </article>
           </div>
         </div>

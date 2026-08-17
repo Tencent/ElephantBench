@@ -663,26 +663,16 @@ input {
 .pipeline {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px 18px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.pipeline::before {
-  position: absolute;
-  top: 68px;
-  right: 7%;
-  left: 7%;
-  height: 1px;
-  content: "";
-  background: linear-gradient(90deg, var(--blue), var(--orange));
-}
-
 .pipeline-step {
   position: relative;
-  min-height: 405px;
+  min-height: 350px;
   padding: 28px 24px;
   background: rgba(255, 255, 255, 0.055);
   border: 1px solid rgba(255, 255, 255, 0.11);
@@ -704,6 +694,20 @@ input {
 
 .pipeline-step:last-child::after {
   display: none;
+}
+
+.pipeline-step:nth-child(3)::after {
+  top: auto;
+  right: 50%;
+  bottom: -34px;
+  width: auto;
+  height: auto;
+  content: "↓";
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 22px;
+  line-height: 1;
+  border: 0;
+  transform: translateX(50%);
 }
 
 .step-number {
@@ -1503,7 +1507,6 @@ input {
   }
 
   .pipeline-step:last-child {
-    grid-column: 1 / -1;
     min-height: 300px;
   }
 
@@ -1646,7 +1649,6 @@ input {
     min-height: auto;
   }
 
-  .pipeline-step:last-child,
   .insight-wide {
     grid-column: auto;
   }
