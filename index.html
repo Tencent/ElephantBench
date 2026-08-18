@@ -33,17 +33,22 @@
           <img src="assets/elephant-icon.png" alt="" />
           <span>ElephantBench</span>
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span></span><span></span><span></span>
-          <span class="sr-only">Toggle navigation</span>
-        </button>
         <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
           <a href="#overview">Overview</a>
           <a href="#construction">Construction</a>
           <a href="#benchmark">Benchmark</a>
+          <a href="#leaderboard">Leaderboard</a>
           <a href="#findings">Findings</a>
           <a href="#resources">Resources</a>
         </nav>
+        <div class="language-switcher" role="group" aria-label="Language">
+          <button type="button" data-language="en" aria-pressed="true">EN</button>
+          <button type="button" data-language="zh" aria-pressed="false">中文</button>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span><span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
       </div>
     </header>
 
@@ -321,6 +326,51 @@
               <span>K</span><h3>Conditional completeness</h3><p><strong>K = C / (C + P)</strong> measures the share of complete recall among questions where at least one verified account is remembered.</p><small>Higher is better</small>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section id="leaderboard" class="section leaderboard-section">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <p class="kicker">Model leaderboard</p>
+            <h2>Complete recall remains below 54% for every single model.</h2>
+            <p>
+              Main configurations reported in the paper, evaluated on all 1,094 questions. Higher
+              C and K and lower P and F indicate better performance.
+            </p>
+          </div>
+
+          <div class="leaderboard-toolbar reveal">
+            <div class="leaderboard-filters" role="group" aria-label="Filter models">
+              <button type="button" class="active" data-leaderboard-filter="all" aria-pressed="true">All models</button>
+              <button type="button" data-leaderboard-filter="proprietary" aria-pressed="false">Proprietary</button>
+              <button type="button" data-leaderboard-filter="gt100" aria-pressed="false">Open &gt;100B</button>
+              <button type="button" data-leaderboard-filter="10to100" aria-pressed="false">Open 10B–100B</button>
+              <button type="button" data-leaderboard-filter="lt10" aria-pressed="false">Open &lt;10B</button>
+            </div>
+            <p><span class="leaderboard-dot"></span> Sorted by complete recall</p>
+          </div>
+
+          <div class="leaderboard-table-shell reveal">
+            <table class="leaderboard-table">
+              <thead>
+                <tr>
+                  <th scope="col">Rank</th>
+                  <th scope="col">Model</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">C ↑</th>
+                  <th scope="col">P ↓</th>
+                  <th scope="col">F ↓</th>
+                  <th scope="col">K ↑</th>
+                </tr>
+              </thead>
+              <tbody data-leaderboard-body></tbody>
+            </table>
+          </div>
+          <p class="leaderboard-note reveal">
+            Values are percentages. C/P/F denote complete, partial, and failed recall;
+            K = C / (C + P) is conditional completeness.
+          </p>
         </div>
       </section>
 
