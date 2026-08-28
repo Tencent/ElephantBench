@@ -1,0 +1,9 @@
+include CONTRIBUTING.md
+include README.md
+recursive-include data *.jsonl *.md SHA256SUMS
+recursive-include src/elephantbench/prompts *.txt
+recursive-include src/elephantbench/taxonomy *.json
+recursive-include tests *.py
+prune build
+prune dist
+global-exclude __pycache__ *.py[cod]

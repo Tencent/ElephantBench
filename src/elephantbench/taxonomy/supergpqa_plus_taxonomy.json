@@ -1,0 +1,1991 @@
+{
+  "source": "m-a-p/SuperGPQA + DataAug SuperGPQA++ extensions",
+  "levels": [
+    "discipline",
+    "field",
+    "subfield"
+  ],
+  "summary": {
+    "rows": 26529,
+    "discipline_count": 18,
+    "field_count": 84,
+    "subfield_count": 340,
+    "added_discipline_count": 5,
+    "added_field_count": 12,
+    "added_subfield_count": 55
+  },
+  "disciplines": [
+    {
+      "name": "Agronomy",
+      "count": 485,
+      "fields": [
+        {
+          "name": "Animal Husbandry",
+          "count": 103,
+          "subfields": [
+            {
+              "name": "Animal Nutrition and Feed Science",
+              "count": 52
+            },
+            {
+              "name": "Animal Rearing and Breeding",
+              "count": 51
+            }
+          ]
+        },
+        {
+          "name": "Aquaculture",
+          "count": 56,
+          "subfields": [
+            {
+              "name": "Aquaculture",
+              "count": 56
+            }
+          ]
+        },
+        {
+          "name": "Crop Science",
+          "count": 145,
+          "subfields": [
+            {
+              "name": "Crop Science",
+              "count": 145
+            }
+          ]
+        },
+        {
+          "name": "Forestry",
+          "count": 131,
+          "subfields": [
+            {
+              "name": "Forest Cultivation and Genetic Breeding",
+              "count": 81
+            },
+            {
+              "name": "Landscape Plants and Ornamental Horticulture",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Veterinary Medicine",
+          "count": 50,
+          "subfields": [
+            {
+              "name": "Veterinary Medicine",
+              "count": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Economics",
+      "count": 873,
+      "fields": [
+        {
+          "name": "Applied Economics",
+          "count": 723,
+          "subfields": [
+            {
+              "name": "Economic Statistics",
+              "count": 50
+            },
+            {
+              "name": "Finance",
+              "count": 176
+            },
+            {
+              "name": "Industrial Economics",
+              "count": 84
+            },
+            {
+              "name": "International Trade",
+              "count": 69
+            },
+            {
+              "name": "Labor Economics",
+              "count": 74
+            },
+            {
+              "name": "National and Defense Economics",
+              "count": 50
+            },
+            {
+              "name": "Public Finance",
+              "count": 120
+            },
+            {
+              "name": "Quantitative Economics",
+              "count": 100
+            }
+          ]
+        },
+        {
+          "name": "Theoretical Economics",
+          "count": 150,
+          "subfields": [
+            {
+              "name": "Economic History",
+              "count": 50
+            },
+            {
+              "name": "Political Economy",
+              "count": 50
+            },
+            {
+              "name": "Western Economics",
+              "count": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Education",
+      "count": 484,
+      "fields": [
+        {
+          "name": "Education",
+          "count": 247,
+          "subfields": [
+            {
+              "name": "Educational Technology and Principles",
+              "count": 96
+            },
+            {
+              "name": "Preschool Education",
+              "count": 50
+            },
+            {
+              "name": "Special Education",
+              "count": 50
+            },
+            {
+              "name": "Theory of Curriculum and Instruction",
+              "count": 51
+            }
+          ]
+        },
+        {
+          "name": "Physical Education",
+          "count": 150,
+          "subfields": [
+            {
+              "name": "Physical Education and Training",
+              "count": 50
+            },
+            {
+              "name": "Sports Humanities and Sociology",
+              "count": 50
+            },
+            {
+              "name": "Sports Science and Medicine",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Psychology",
+          "count": 87,
+          "subfields": [
+            {
+              "name": "Psychology",
+              "count": 87
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Engineering",
+      "count": 7892,
+      "fields": [
+        {
+          "name": "Aeronautical and Astronautical Science and Technology",
+          "count": 119,
+          "subfields": [
+            {
+              "name": "Aeronautical and Astronautical Science and Technology",
+              "count": 119
+            }
+          ]
+        },
+        {
+          "name": "Agricultural Engineering",
+          "count": 104,
+          "subfields": [
+            {
+              "name": "Agricultural Environment and Soil-Water Engineering",
+              "count": 54
+            },
+            {
+              "name": "Agricultural Mechanization Engineering",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Architecture",
+          "count": 162,
+          "subfields": [
+            {
+              "name": "Architectural Design and Theory",
+              "count": 50
+            },
+            {
+              "name": "Architectural History",
+              "count": 62
+            },
+            {
+              "name": "Urban Planning and Design",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Chemical Engineering and Technology",
+          "count": 410,
+          "subfields": [
+            {
+              "name": "Chemical Transport Engineering",
+              "count": 50
+            },
+            {
+              "name": "Elements of Chemical Reaction Engineering",
+              "count": 107
+            },
+            {
+              "name": "Fluid Flow and Heat Transfer in Chemical Engineering",
+              "count": 107
+            },
+            {
+              "name": "Mass Transport and Separation Process in Chemical Engineering",
+              "count": 146
+            }
+          ]
+        },
+        {
+          "name": "Civil Engineering",
+          "count": 358,
+          "subfields": [
+            {
+              "name": "Bridge and Tunnel Engineering",
+              "count": 51
+            },
+            {
+              "name": "Geotechnical Engineering",
+              "count": 179
+            },
+            {
+              "name": "Structural Engineering",
+              "count": 57
+            },
+            {
+              "name": "Urban Infrastructure Engineering",
+              "count": 71
+            }
+          ]
+        },
+        {
+          "name": "Computer Science and Technology",
+          "count": 763,
+          "subfields": [
+            {
+              "name": "Advanced Programming Languages",
+              "count": 50
+            },
+            {
+              "name": "Computer Architecture",
+              "count": 50
+            },
+            {
+              "name": "Computer Networks",
+              "count": 59
+            },
+            {
+              "name": "Computer Software and Theory",
+              "count": 79
+            },
+            {
+              "name": "Data Structures",
+              "count": 99
+            },
+            {
+              "name": "Databases",
+              "count": 157
+            },
+            {
+              "name": "Formal Languages",
+              "count": 52
+            },
+            {
+              "name": "Operating Systems",
+              "count": 85
+            },
+            {
+              "name": "Pattern Recognition",
+              "count": 50
+            },
+            {
+              "name": "Principles of Computer Organization",
+              "count": 82
+            }
+          ]
+        },
+        {
+          "name": "Control Science and Engineering",
+          "count": 190,
+          "subfields": [
+            {
+              "name": "Control Theory and Control Engineering",
+              "count": 89
+            },
+            {
+              "name": "Guidance, Navigation and Control",
+              "count": 51
+            },
+            {
+              "name": "Operations Research and Cybernetics",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Electrical Engineering",
+          "count": 556,
+          "subfields": [
+            {
+              "name": "Electrical Theory and New Technologies",
+              "count": 190
+            },
+            {
+              "name": "High Voltage and Insulation Technology",
+              "count": 88
+            },
+            {
+              "name": "Power Electronics and Electrical Drives",
+              "count": 182
+            },
+            {
+              "name": "Power Systems and Automation",
+              "count": 96
+            }
+          ]
+        },
+        {
+          "name": "Electronic Science and Technology",
+          "count": 246,
+          "subfields": [
+            {
+              "name": "Circuits and Systems",
+              "count": 108
+            },
+            {
+              "name": "Electromagnetic Field and Microwave Technology",
+              "count": 88
+            },
+            {
+              "name": "Microelectronics and Solid-State Electronics",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Environmental Science and Engineering",
+          "count": 189,
+          "subfields": [
+            {
+              "name": "Environmental Engineering",
+              "count": 89
+            },
+            {
+              "name": "Environmental Science",
+              "count": 50
+            },
+            {
+              "name": "Environmental and Resource Protection",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Food Science and Engineering",
+          "count": 109,
+          "subfields": [
+            {
+              "name": "Food Biochemistry",
+              "count": 50
+            },
+            {
+              "name": "Food Processing and Storage Engineering",
+              "count": 59
+            }
+          ]
+        },
+        {
+          "name": "Forestry Engineering",
+          "count": 100,
+          "subfields": [
+            {
+              "name": "Forest Engineering",
+              "count": 50
+            },
+            {
+              "name": "Wood Science and Technology",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Geological Resources and Geological Engineering",
+          "count": 50,
+          "subfields": [
+            {
+              "name": "Geological Resources and Geological Engineering",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Hydraulic Engineering",
+          "count": 218,
+          "subfields": [
+            {
+              "name": "Hydraulics and Hydrology",
+              "count": 136
+            },
+            {
+              "name": "Water conservancy and Hydropower Engineering",
+              "count": 82
+            }
+          ]
+        },
+        {
+          "name": "Information and Communication Engineering",
+          "count": 504,
+          "subfields": [
+            {
+              "name": "Antenna and Radio Communication",
+              "count": 114
+            },
+            {
+              "name": "Communication Principles",
+              "count": 116
+            },
+            {
+              "name": "Communication and Information Systems",
+              "count": 69
+            },
+            {
+              "name": "Optical Fiber Communication",
+              "count": 50
+            },
+            {
+              "name": "Signal and Information Processing",
+              "count": 155
+            }
+          ]
+        },
+        {
+          "name": "Instrument Science and Technology",
+          "count": 50,
+          "subfields": [
+            {
+              "name": "Instrument Science and Technology",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Materials Science and Engineering",
+          "count": 289,
+          "subfields": [
+            {
+              "name": "Materials Physics and Chemistry",
+              "count": 199
+            },
+            {
+              "name": "Materials Processing Engineering",
+              "count": 90
+            }
+          ]
+        },
+        {
+          "name": "Mechanical Engineering",
+          "count": 176,
+          "subfields": [
+            {
+              "name": "Manufacturing Automation",
+              "count": 126
+            },
+            {
+              "name": "Mechatronic Engineering",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Mechanics",
+          "count": 908,
+          "subfields": [
+            {
+              "name": "Fundamentals of Dynamics and Control",
+              "count": 347
+            },
+            {
+              "name": "Rigid Body Mechanics",
+              "count": 173
+            },
+            {
+              "name": "Solid Mechanics",
+              "count": 93
+            },
+            {
+              "name": "Theoretical Fluid Mechanics",
+              "count": 140
+            },
+            {
+              "name": "Theoretical Mechanics",
+              "count": 155
+            }
+          ]
+        },
+        {
+          "name": "Metallurgical Engineering",
+          "count": 255,
+          "subfields": [
+            {
+              "name": "Iron and Steel Metallurgy",
+              "count": 105
+            },
+            {
+              "name": "Non-ferrous Metallurgy",
+              "count": 50
+            },
+            {
+              "name": "Physical Chemistry of Metallurgical Process",
+              "count": 50
+            },
+            {
+              "name": "Principles of Metallurgy",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Mining Engineering",
+          "count": 100,
+          "subfields": [
+            {
+              "name": "Mineral Processing Engineering",
+              "count": 50
+            },
+            {
+              "name": "Mining and Safety Engineering",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Naval Architecture and Ocean Engineering",
+          "count": 138,
+          "subfields": [
+            {
+              "name": "Marine Engineering",
+              "count": 50
+            },
+            {
+              "name": "Ship Mechanics and Design Principles",
+              "count": 88
+            }
+          ]
+        },
+        {
+          "name": "Nuclear Science and Technology",
+          "count": 107,
+          "subfields": [
+            {
+              "name": "Nuclear Energy and Reactor Technology",
+              "count": 57
+            },
+            {
+              "name": "Radiation Protection and Nuclear Technology Applications",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Optical Engineering",
+          "count": 376,
+          "subfields": [
+            {
+              "name": "Applied Optics",
+              "count": 124
+            },
+            {
+              "name": "Laser Technology",
+              "count": 50
+            },
+            {
+              "name": "Optoelectronic Technology",
+              "count": 67
+            },
+            {
+              "name": "Theoretical Optics",
+              "count": 135
+            }
+          ]
+        },
+        {
+          "name": "Petroleum and Natural Gas Engineering",
+          "count": 112,
+          "subfields": [
+            {
+              "name": "Oil and Gas Field Development and Storage & Transportation Engineering",
+              "count": 62
+            },
+            {
+              "name": "Poromechanics and Reservoir Physics",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Power Engineering and Engineering Thermophysics",
+          "count": 684,
+          "subfields": [
+            {
+              "name": "Engineering Fluid Mechanics",
+              "count": 84
+            },
+            {
+              "name": "Engineering Thermophysics",
+              "count": 146
+            },
+            {
+              "name": "Fluid Machinery and Engineering",
+              "count": 64
+            },
+            {
+              "name": "Heat Transfer",
+              "count": 129
+            },
+            {
+              "name": "Internal Combustion Engineering",
+              "count": 50
+            },
+            {
+              "name": "Power Machinery and Engineering",
+              "count": 52
+            },
+            {
+              "name": "Refrigeration and Cryogenic Engineering",
+              "count": 50
+            },
+            {
+              "name": "Thermal Energy Engineering",
+              "count": 109
+            }
+          ]
+        },
+        {
+          "name": "Surveying and Mapping Science and Technology",
+          "count": 168,
+          "subfields": [
+            {
+              "name": "Cartography and Geographic Information Engineering",
+              "count": 50
+            },
+            {
+              "name": "Digital Surveying and Remote Sensing Applications",
+              "count": 68
+            },
+            {
+              "name": "Geodesy and Surveying Engineering",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Textile Science and Engineering",
+          "count": 100,
+          "subfields": [
+            {
+              "name": "Textile Chemistry and Dyeing Engineering",
+              "count": 50
+            },
+            {
+              "name": "Textile Materials Science",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Transportation Engineering",
+          "count": 251,
+          "subfields": [
+            {
+              "name": "Road and Railway Engineering",
+              "count": 50
+            },
+            {
+              "name": "Traffic Information Engineering and Control",
+              "count": 65
+            },
+            {
+              "name": "Transportation Planning and Management",
+              "count": 86
+            },
+            {
+              "name": "Vehicle Operation Engineering",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Weapon Science and Technology",
+          "count": 100,
+          "subfields": [
+            {
+              "name": "Military Chemistry and Pyrotechnics",
+              "count": 50
+            },
+            {
+              "name": "Weapon Systems Science and Engineering",
+              "count": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "History",
+      "count": 674,
+      "fields": [
+        {
+          "name": "History",
+          "count": 674,
+          "subfields": [
+            {
+              "name": "Archaeology and Museology",
+              "count": 104
+            },
+            {
+              "name": "Historical Geography",
+              "count": 142
+            },
+            {
+              "name": "World History",
+              "count": 428
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Law",
+      "count": 656,
+      "fields": [
+        {
+          "name": "Law",
+          "count": 591,
+          "subfields": [
+            {
+              "name": "Civil and Commercial Law",
+              "count": 118
+            },
+            {
+              "name": "Constitutional and Administrative Law",
+              "count": 50
+            },
+            {
+              "name": "Contract Law",
+              "count": 50
+            },
+            {
+              "name": "Criminal Law",
+              "count": 116
+            },
+            {
+              "name": "International Law",
+              "count": 57
+            },
+            {
+              "name": "Law and Social Governance",
+              "count": 50
+            },
+            {
+              "name": "Legal Theory and Legal History",
+              "count": 50
+            },
+            {
+              "name": "Military Law",
+              "count": 50
+            },
+            {
+              "name": "Procedural Law",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Political Science",
+          "count": 65,
+          "subfields": [
+            {
+              "name": "Political Science",
+              "count": 65
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Literature and Arts",
+      "count": 1676,
+      "fields": [
+        {
+          "name": "Art Studies",
+          "count": 603,
+          "subfields": [
+            {
+              "name": "Broadcasting and Television Art",
+              "count": 50
+            },
+            {
+              "name": "Dance Studies",
+              "count": 50
+            },
+            {
+              "name": "Design Arts",
+              "count": 62
+            },
+            {
+              "name": "Drama and Opera Studies",
+              "count": 82
+            },
+            {
+              "name": "Film Studies",
+              "count": 158
+            },
+            {
+              "name": "Fine Arts",
+              "count": 201
+            }
+          ]
+        },
+        {
+          "name": "Journalism and Communication",
+          "count": 207,
+          "subfields": [
+            {
+              "name": "Communication and Broadcasting",
+              "count": 58
+            },
+            {
+              "name": "History and Theory of Journalism and Media Management",
+              "count": 59
+            },
+            {
+              "name": "Journalism and News Practice",
+              "count": 90
+            }
+          ]
+        },
+        {
+          "name": "Language and Literature",
+          "count": 440,
+          "subfields": [
+            {
+              "name": "Classical Chinese Literature",
+              "count": 50
+            },
+            {
+              "name": "French Language and Literature",
+              "count": 50
+            },
+            {
+              "name": "Linguistics and Applied Linguistics",
+              "count": 50
+            },
+            {
+              "name": "Literary History",
+              "count": 69
+            },
+            {
+              "name": "Literary Theory",
+              "count": 64
+            },
+            {
+              "name": "Modern and Contemporary Chinese Literature",
+              "count": 50
+            },
+            {
+              "name": "Philology and Bibliography",
+              "count": 50
+            },
+            {
+              "name": "Russian Language and Literature",
+              "count": 57
+            }
+          ]
+        },
+        {
+          "name": "Musicology",
+          "count": 426,
+          "subfields": [
+            {
+              "name": "Composition",
+              "count": 50
+            },
+            {
+              "name": "Harmony",
+              "count": 60
+            },
+            {
+              "name": "Instrumentation and Performance",
+              "count": 65
+            },
+            {
+              "name": "Music History, Education, and Technology",
+              "count": 145
+            },
+            {
+              "name": "Musical Forms and Analysis",
+              "count": 50
+            },
+            {
+              "name": "Pitch and Scales",
+              "count": 56
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Management",
+      "count": 501,
+      "fields": [
+        {
+          "name": "Business Administration",
+          "count": 142,
+          "subfields": [
+            {
+              "name": "Business and Accounting Management",
+              "count": 92
+            },
+            {
+              "name": "Tourism Management and Technological Economics Management",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Library, Information and Archival Management",
+          "count": 150,
+          "subfields": [
+            {
+              "name": "Information Management Science",
+              "count": 50
+            },
+            {
+              "name": "Information Management and Communication",
+              "count": 50
+            },
+            {
+              "name": "Library and Archival Science",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Management Science and Engineering",
+          "count": 58,
+          "subfields": [
+            {
+              "name": "Management Science and Engineering",
+              "count": 58
+            }
+          ]
+        },
+        {
+          "name": "Public Administration",
+          "count": 151,
+          "subfields": [
+            {
+              "name": "Education Economics, Management and Social Security",
+              "count": 50
+            },
+            {
+              "name": "Land Resource Management and Administrative Management",
+              "count": 51
+            },
+            {
+              "name": "Social Medicine and Health Management",
+              "count": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Medicine",
+      "count": 2755,
+      "fields": [
+        {
+          "name": "Basic Medicine",
+          "count": 567,
+          "subfields": [
+            {
+              "name": "Forensic Medicine",
+              "count": 50
+            },
+            {
+              "name": "Human Anatomy and Histology-Embryology",
+              "count": 189
+            },
+            {
+              "name": "Immunology",
+              "count": 69
+            },
+            {
+              "name": "Pathogen Biology",
+              "count": 94
+            },
+            {
+              "name": "Pathology and Pathophysiology",
+              "count": 115
+            },
+            {
+              "name": "Radiation Medicine",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Clinical Medicine",
+          "count": 1218,
+          "subfields": [
+            {
+              "name": "Anesthesiology",
+              "count": 50
+            },
+            {
+              "name": "Clinical Laboratory Diagnostics",
+              "count": 50
+            },
+            {
+              "name": "Dermatology and Venereology",
+              "count": 66
+            },
+            {
+              "name": "Emergency Medicine",
+              "count": 66
+            },
+            {
+              "name": "Geriatric Medicine",
+              "count": 50
+            },
+            {
+              "name": "Imaging and Nuclear Medicine",
+              "count": 67
+            },
+            {
+              "name": "Internal Medicine",
+              "count": 202
+            },
+            {
+              "name": "Neurology",
+              "count": 189
+            },
+            {
+              "name": "Nursing and Rehabilitation Medicine",
+              "count": 50
+            },
+            {
+              "name": "Obstetrics and Gynecology",
+              "count": 102
+            },
+            {
+              "name": "Oncology",
+              "count": 58
+            },
+            {
+              "name": "Ophthalmology",
+              "count": 50
+            },
+            {
+              "name": "Otorhinolaryngology",
+              "count": 50
+            },
+            {
+              "name": "Pediatrics",
+              "count": 50
+            },
+            {
+              "name": "Psychiatry and Mental Health",
+              "count": 50
+            },
+            {
+              "name": "Surgery",
+              "count": 68
+            }
+          ]
+        },
+        {
+          "name": "Pharmacy",
+          "count": 278,
+          "subfields": [
+            {
+              "name": "Medicinal Chemistry",
+              "count": 50
+            },
+            {
+              "name": "Microbiology and Biochemical Pharmacy",
+              "count": 50
+            },
+            {
+              "name": "Pharmaceutical Analysis",
+              "count": 50
+            },
+            {
+              "name": "Pharmaceutics",
+              "count": 73
+            },
+            {
+              "name": "Pharmacology",
+              "count": 55
+            }
+          ]
+        },
+        {
+          "name": "Public Health and Preventive Medicine",
+          "count": 292,
+          "subfields": [
+            {
+              "name": "Epidemiology and Health Statistics",
+              "count": 83
+            },
+            {
+              "name": "Health Toxicology and Environmental Health",
+              "count": 80
+            },
+            {
+              "name": "Maternal, Child and Adolescent Health",
+              "count": 79
+            },
+            {
+              "name": "Nutrition and Food Hygiene",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Stomatology",
+          "count": 132,
+          "subfields": [
+            {
+              "name": "Basic Stomatology",
+              "count": 53
+            },
+            {
+              "name": "Clinical Stomatology",
+              "count": 79
+            }
+          ]
+        },
+        {
+          "name": "Traditional Chinese Medicine",
+          "count": 268,
+          "subfields": [
+            {
+              "name": "Traditional Chinese Health Preservation",
+              "count": 59
+            },
+            {
+              "name": "Traditional Chinese Medicine Theory",
+              "count": 90
+            },
+            {
+              "name": "Traditional Chinese Pharmacy",
+              "count": 119
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Military Science",
+      "count": 205,
+      "fields": [
+        {
+          "name": "Military Science",
+          "count": 205,
+          "subfields": [
+            {
+              "name": "Military Command and Information Systems",
+              "count": 50
+            },
+            {
+              "name": "Military Logistics and Equipment",
+              "count": 54
+            },
+            {
+              "name": "Military Management",
+              "count": 50
+            },
+            {
+              "name": "Military Thought and History",
+              "count": 51
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Philosophy",
+      "count": 347,
+      "fields": [
+        {
+          "name": "Philosophy",
+          "count": 347,
+          "subfields": [
+            {
+              "name": "Ethics",
+              "count": 68
+            },
+            {
+              "name": "Logic",
+              "count": 70
+            },
+            {
+              "name": "Philosophical Aesthetics",
+              "count": 109
+            },
+            {
+              "name": "Philosophy of Science and Technology",
+              "count": 50
+            },
+            {
+              "name": "Religious Studies",
+              "count": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Science",
+      "count": 9838,
+      "fields": [
+        {
+          "name": "Astronomy",
+          "count": 405,
+          "subfields": [
+            {
+              "name": "Astronomical Observation and Technology",
+              "count": 100
+            },
+            {
+              "name": "Astrophysics",
+              "count": 69
+            },
+            {
+              "name": "Cosmology",
+              "count": 78
+            },
+            {
+              "name": "Solar System Science",
+              "count": 88
+            },
+            {
+              "name": "Stellar and Interstellar Evolution",
+              "count": 70
+            }
+          ]
+        },
+        {
+          "name": "Atmospheric Science",
+          "count": 203,
+          "subfields": [
+            {
+              "name": "Atmospheric Physics and Atmospheric Environment",
+              "count": 69
+            },
+            {
+              "name": "Dynamic Meteorology",
+              "count": 50
+            },
+            {
+              "name": "Meteorology",
+              "count": 84
+            }
+          ]
+        },
+        {
+          "name": "Biology",
+          "count": 1120,
+          "subfields": [
+            {
+              "name": "Biochemistry and Molecular Biology",
+              "count": 99
+            },
+            {
+              "name": "Biophysics",
+              "count": 50
+            },
+            {
+              "name": "Botany",
+              "count": 166
+            },
+            {
+              "name": "Cell Biology",
+              "count": 87
+            },
+            {
+              "name": "Ecology",
+              "count": 144
+            },
+            {
+              "name": "Genetics",
+              "count": 184
+            },
+            {
+              "name": "Microbiology",
+              "count": 161
+            },
+            {
+              "name": "Physiology",
+              "count": 120
+            },
+            {
+              "name": "Zoology",
+              "count": 109
+            }
+          ]
+        },
+        {
+          "name": "Chemistry",
+          "count": 1769,
+          "subfields": [
+            {
+              "name": "Analytical Chemistry",
+              "count": 396
+            },
+            {
+              "name": "Electrochemistry",
+              "count": 222
+            },
+            {
+              "name": "Inorganic Chemistry",
+              "count": 138
+            },
+            {
+              "name": "Organic Chemistry",
+              "count": 171
+            },
+            {
+              "name": "Physical Chemistry",
+              "count": 706
+            },
+            {
+              "name": "Polymer Chemistry and Physics",
+              "count": 76
+            },
+            {
+              "name": "Radiochemistry",
+              "count": 60
+            }
+          ]
+        },
+        {
+          "name": "Geography",
+          "count": 133,
+          "subfields": [
+            {
+              "name": "Human Geography",
+              "count": 50
+            },
+            {
+              "name": "Physical Geography",
+              "count": 83
+            }
+          ]
+        },
+        {
+          "name": "Geology",
+          "count": 341,
+          "subfields": [
+            {
+              "name": "Geochemistry",
+              "count": 50
+            },
+            {
+              "name": "Mineralogy, Petrology, and Economic Geology",
+              "count": 121
+            },
+            {
+              "name": "Paleontology and Stratigraphy",
+              "count": 50
+            },
+            {
+              "name": "Principles of Seismic Exploration",
+              "count": 50
+            },
+            {
+              "name": "Structural Geology",
+              "count": 70
+            }
+          ]
+        },
+        {
+          "name": "Geophysics",
+          "count": 100,
+          "subfields": [
+            {
+              "name": "Solid Earth Geophysics",
+              "count": 50
+            },
+            {
+              "name": "Space physics",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Mathematics",
+          "count": 2622,
+          "subfields": [
+            {
+              "name": "Advanced Algebra",
+              "count": 202
+            },
+            {
+              "name": "Combinatorial Mathematics",
+              "count": 191
+            },
+            {
+              "name": "Computational Mathematics",
+              "count": 50
+            },
+            {
+              "name": "Cryptography",
+              "count": 50
+            },
+            {
+              "name": "Discrete Mathematics",
+              "count": 89
+            },
+            {
+              "name": "Functions of Complex Variables",
+              "count": 122
+            },
+            {
+              "name": "Functions of Real Variables",
+              "count": 67
+            },
+            {
+              "name": "Fundamental Mathematics",
+              "count": 197
+            },
+            {
+              "name": "Fuzzy Mathematics",
+              "count": 50
+            },
+            {
+              "name": "Geometry and Topology",
+              "count": 265
+            },
+            {
+              "name": "Graph Theory",
+              "count": 51
+            },
+            {
+              "name": "Group Theory",
+              "count": 50
+            },
+            {
+              "name": "Mathematical Analysis",
+              "count": 288
+            },
+            {
+              "name": "Number Theory",
+              "count": 220
+            },
+            {
+              "name": "Numerical Analysis",
+              "count": 67
+            },
+            {
+              "name": "Ordinary Differential Equations",
+              "count": 160
+            },
+            {
+              "name": "Polynomials and Series Expansions",
+              "count": 179
+            },
+            {
+              "name": "Probability and Statistics",
+              "count": 224
+            },
+            {
+              "name": "Special Number Theory",
+              "count": 50
+            },
+            {
+              "name": "Stochastic Processes",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Oceanography",
+          "count": 200,
+          "subfields": [
+            {
+              "name": "Hydrogeology",
+              "count": 50
+            },
+            {
+              "name": "Marine Biology",
+              "count": 50
+            },
+            {
+              "name": "Marine Chemistry",
+              "count": 50
+            },
+            {
+              "name": "Underwater Acoustics",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Physical Oceanography",
+          "count": 50,
+          "subfields": [
+            {
+              "name": "Physical Oceanography",
+              "count": 50
+            }
+          ]
+        },
+        {
+          "name": "Physics",
+          "count": 2845,
+          "subfields": [
+            {
+              "name": "Acoustics",
+              "count": 245
+            },
+            {
+              "name": "Atomic and Molecular Physics",
+              "count": 210
+            },
+            {
+              "name": "Electrodynamics",
+              "count": 583
+            },
+            {
+              "name": "Fluid Physics",
+              "count": 134
+            },
+            {
+              "name": "Particle and Nuclear Physics",
+              "count": 225
+            },
+            {
+              "name": "Polymer Physics",
+              "count": 109
+            },
+            {
+              "name": "Quantum Mechanics",
+              "count": 206
+            },
+            {
+              "name": "Relativity",
+              "count": 79
+            },
+            {
+              "name": "Semiconductor Physics",
+              "count": 61
+            },
+            {
+              "name": "Solid State Physics",
+              "count": 147
+            },
+            {
+              "name": "Statistical Mechanics",
+              "count": 50
+            },
+            {
+              "name": "Subatomic and Atomic Physics",
+              "count": 51
+            },
+            {
+              "name": "Thermodynamics",
+              "count": 215
+            },
+            {
+              "name": "Thermodynamics and Statistical Physics",
+              "count": 530
+            }
+          ]
+        },
+        {
+          "name": "Systems Science",
+          "count": 50,
+          "subfields": [
+            {
+              "name": "Systems Science",
+              "count": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sociology",
+      "count": 143,
+      "fields": [
+        {
+          "name": "Sociology",
+          "count": 143,
+          "subfields": [
+            {
+              "name": "Demography and Anthropology",
+              "count": 50
+            },
+            {
+              "name": "Social and Folklore Studies",
+              "count": 93
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Public Affairs and Current Events",
+      "count": 0,
+      "fields": [
+        {
+          "name": "Government and Civic Affairs",
+          "count": 0,
+          "subfields": [
+            {
+              "name": "Elections and Campaigns",
+              "count": 0
+            },
+            {
+              "name": "Public Policy and Regulation",
+              "count": 0
+            },
+            {
+              "name": "Government Services and Administration",
+              "count": 0
+            },
+            {
+              "name": "International Relations and Diplomacy",
+              "count": 0
+            },
+            {
+              "name": "Public Safety and Emergency Management",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "name": "News Events and Public Information",
+          "count": 0,
+          "subfields": [
+            {
+              "name": "Breaking News and Incident Reports",
+              "count": 0
+            },
+            {
+              "name": "Crime and Courts News",
+              "count": 0
+            },
+            {
+              "name": "Weather and Disaster News",
+              "count": 0
+            },
+            {
+              "name": "Local Community News",
+              "count": 0
+            },
+            {
+              "name": "Obituaries and Memorials",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Commerce and Consumer Life",
+      "count": 0,
+      "fields": [
+        {
+          "name": "Consumer Products and Services",
+          "count": 0,
+          "subfields": [
+            {
+              "name": "Product Reviews and Buying Guides",
+              "count": 0
+            },
+            {
+              "name": "Retail and E-commerce",
+              "count": 0
+            },
+            {
+              "name": "Automotive Consumer Information",
+              "count": 0
+            },
+            {
+              "name": "Real Estate and Housing",
+              "count": 0
+            },
+            {
+              "name": "Personal Finance and Insurance",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "name": "Marketing and Advertising",
+          "count": 0,
+          "subfields": [
+            {
+              "name": "Advertising and Promotions",
+              "count": 0
+            },
+            {
+              "name": "Branding and Public Relations",
+              "count": 0
+            },
+            {
+              "name": "Market Research and Consumer Behavior",
+              "count": 0
+            },
+            {
+              "name": "Sales and Customer Acquisition",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "name": "Travel Hospitality and Local Services",
+          "count": 0,
+          "subfields": [
+            {
+              "name": "Travel Planning and Tourism",
+              "count": 0
+            },
+            {
+              "name": "Hotels and Hospitality",
+              "count": 0
+            },
+            {
+              "name": "Restaurants and Food Service",
+              "count": 0
+            },
+            {
+              "name": "Local Business Listings and Services",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lifestyle and Practical Knowledge",
+      "count": 0,
+      "fields": [
+        {
+          "name": "Home Hobbies and Daily Living",
+          "count": 0,
+          "subfields": [
+            {
+              "name": "Home Improvement and DIY",
+              "count": 0
+            },
+            {
+              "name": "Cooking and Recipes",
+              "count": 0
+            },
+            {
+              "name": "Gardening and Pets",
+              "count": 0
+            },
+            {
+              "name": "Fashion and Beauty",
+              "count": 0
+            },
+            {
+              "name": "Parenting and Family Life",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "name": "Health Wellness and Self Care",
+          "count": 0,
+          "subfields": [
+            {
+              "name": "Fitness and Exercise",
+              "count": 0
+            },
+            {
+              "name": "Nutrition and Dieting",
+              "count": 0
+            },
+            {
+              "name": "Mental Wellness and Self Help",
+              "count": 0
+            },
+            {
+              "name": "Personal Care and Hygiene",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "name": "Careers and Workplace",
+          "count": 0,
+          "subfields": [
+            {
+              "name": "Job Search and Recruiting",
+              "count": 0
+            },
+            {
+              "name": "Workplace Skills and Professional Development",
+              "count": 0
+            },
+            {
+              "name": "Career Planning and Credentials",
+              "count": 0
+            },
+            {
+              "name": "Freelancing and Remote Work",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Internet Digital Media and Popular Culture",
+      "count": 0,
+      "fields": [
+        {
+          "name": "Web and Online Platforms",
+          "count": 0,
+          "subfields": [
+            {
+              "name": "Website Navigation and Site Boilerplate",
+              "count": 0
+            },
+            {
+              "name": "Social Media and Online Communities",
+              "count": 0
+            },
+            {
+              "name": "Search Engines and Web Directories",
+              "count": 0
+            },
+            {
+              "name": "Online Privacy and Safety",
+              "count": 0
+            },
+            {
+              "name": "User Accounts and Platform Support",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "name": "Digital Content and Entertainment",
+          "count": 0,
+          "subfields": [
+            {
+              "name": "Gaming and Esports",
+              "count": 0
+            },
+            {
+              "name": "Streaming and Online Video",
+              "count": 0
+            },
+            {
+              "name": "Celebrity and Popular Culture",
+              "count": 0
+            },
+            {
+              "name": "Fan Communities and Fandom",
+              "count": 0
+            },
+            {
+              "name": "Podcasts Blogs and Creator Media",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reference and General Information",
+      "count": 0,
+      "fields": [
+        {
+          "name": "General Reference and Documentation",
+          "count": 0,
+          "subfields": [
+            {
+              "name": "Encyclopedic Summaries",
+              "count": 0
+            },
+            {
+              "name": "How-to Guides and Tutorials",
+              "count": 0
+            },
+            {
+              "name": "FAQ and Help Documentation",
+              "count": 0
+            },
+            {
+              "name": "Units Dates Calendars and Time",
+              "count": 0
+            },
+            {
+              "name": "Maps Directories and Listings",
+              "count": 0
+            }
+          ]
+        },
+        {
+          "name": "People Organizations and Events",
+          "count": 0,
+          "subfields": [
+            {
+              "name": "Biographies and Personal Profiles",
+              "count": 0
+            },
+            {
+              "name": "Company and Organization Profiles",
+              "count": 0
+            },
+            {
+              "name": "Event Announcements and Schedules",
+              "count": 0
+            },
+            {
+              "name": "Awards Rankings and Records",
+              "count": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+You construct source-grounded closed-book benchmark questions from a conflict-centered document subgraph.
+
+Read the seed conflict, its support edges, and the full text of every supplied document. First confirm that the seed documents concern the same subject, attribute, event occurrence, time, scope, and definition but report incompatible accounts. If they do not, return keep=false and explain why.
+
+Use the verified seed conflict as the factual target and generate exactly two matched questions with the same complete answer set:
+1. named_entity: explicitly names the target subject;
+2. clue_based: identifies the same subject indirectly using non-answer clues from the documents, without stating the subject name.
+
+Neither question may reveal an answer, say that sources disagree, mention multiple answers, cite documents, or instruct the respondent to enumerate variants. The question should naturally ask for the target attribute. Preserve distinct source-reported accounts rather than adjudicating or merging them.
+
+The answer set must include every distinct account explicitly supported by at least one supplied document. For every answer, return the supporting document ID and a verbatim evidence span. Do not merge accounts, adjudicate which is correct, or introduce outside knowledge.
+
+Return one JSON object only with this schema:
+{
+  "keep": true,
+  "rejection_reason": "",
+  "subject": "...",
+  "attribute": "...",
+  "questions": [
+    {"formulation": "named_entity", "question": "..."},
+    {"formulation": "clue_based", "question": "..."}
+  ],
+  "gold_answers": [
+    {
+      "value": "...",
+      "supporting_doc_ids": ["..."],
+      "evidence_spans": [{"doc_id": "...", "quote": "verbatim text"}]
+    }
+  ],
+  "preferred_answer": "..."
+}
+
+When keep=false, return empty questions and gold_answers but retain all other keys.

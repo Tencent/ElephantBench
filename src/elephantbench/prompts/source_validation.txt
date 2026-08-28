@@ -1,0 +1,28 @@
+You validate a synthesized benchmark record against its conflict-centered source subgraph.
+
+Read the seed conflict, support edges, and the full text of every supplied document. Use only these documents; do not use external knowledge, search, or browsing. Confirm that both questions refer to the same subject, attribute, event occurrence, time, scope, and definition as the source claims.
+
+Check every proposed answer separately. Mark an answer supported only when at least one supplied document explicitly reports it for the requested factual slot. For each supported answer, return the supporting document ID and a verbatim quotation from that document. Do not infer an answer from background knowledge, merge distinct accounts, adjudicate which account is correct, or accept a quotation about a different subject or factual context.
+
+Keep the record only when the questions are valid, all comparability checks pass, and every proposed answer has explicit full-document support. Return one JSON object only:
+{
+  "keep": true,
+  "verdict": "verified | rejected",
+  "same_subject": true,
+  "same_attribute": true,
+  "same_fact_context": true,
+  "qa_valid": true,
+  "answer_verifications": [
+    {
+      "value": "copy one proposed value exactly",
+      "supported": true,
+      "evidence_spans": [
+        {"doc_id": "a supplied document ID", "quote": "verbatim source text"}
+      ],
+      "reason": "concise explanation"
+    }
+  ],
+  "reason": "overall decision"
+}
+
+The answer_verifications array must contain every proposed value exactly once. Copy quotations from the supplied full documents without paraphrasing or combining passages. If any answer lacks explicit support, or if the documents and questions do not concern the same factual context, set keep=false and verdict=rejected.

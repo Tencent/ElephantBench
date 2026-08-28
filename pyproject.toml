@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "elephantbench"
+version = "0.1.0"
+description = "Closed-book evaluation of long-tail divergent knowledge in LLM parametric memory"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["benchmark", "large-language-models", "long-tail-knowledge", "factual-recall"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://tencent.github.io/ElephantBench"
+Repository = "https://github.com/Tencent/ElephantBench"
+Dataset = "https://huggingface.co/datasets/Tencent/ElephantBench"
+
+[project.optional-dependencies]
+construction = [
+  "huggingface_hub>=0.30",
+  "torch>=2.2",
+  "transformers>=4.40",
+  "zstandard>=0.22",
+]
+tagging = [
+  "torch>=2.2",
+  "transformers>=4.40",
+  "zstandard>=0.22",
+]
+dev = [
+  "build>=1.2",
+  "ruff>=0.6",
+  "zstandard>=0.22",
+]
+
+[project.scripts]
+elephantbench-run = "elephantbench.inference:main"
+elephantbench-judge = "elephantbench.judge:main"
+elephantbench-score = "elephantbench.metrics:main"
+elephantbench-analyze = "elephantbench.analysis:main"
+elephantbench-validate = "elephantbench.validate:main"
+elephantbench-construct = "elephantbench.construction_pipeline.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+elephantbench = ["prompts/*.txt", "taxonomy/*.json"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
