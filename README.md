@@ -13,7 +13,7 @@
       alt="ElephantBench Leaderboard"
     />
   </a>
-  <a href="">
+  <a href="https://arxiv.org/abs/2608.28478">
     <img
       src="https://img.shields.io/badge/ElephantBench-Paper-red?logo=arxiv&logoColor=red"
       alt="Paper"
@@ -297,4 +297,11 @@ ElephantBench is released under the [Apache License 2.0](LICENSE).
 
 ## Citation
 
-Citation details will be added with the accompanying paper.
+```
+@article{pan2026elephantbench,
+  title={Blind Men and the Elephant: Probing the Epistemic Myopia of LLMs under Long-Tail Divergent Knowledge},
+  author={Pan, Zhuoshi and Lu, Junru and Qian, Yan and Zhao, H. Vicky and Yin, Di and Sun, Xing},
+  journal={arXiv preprint arXiv:2608.28478},
+  year={2026}
+}
+```
